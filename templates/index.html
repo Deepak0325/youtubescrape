@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Youtuber's Details</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h3 style="text-align: center">Name Or Channel URL</h3>
+
+    <div class="form">
+        <form action="/youtuberdata" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+
+        </form>
+    </div>
+    <h3 style="text-align: center">MySQL Credentials</h3>
+    <h5 style="text-align: center">user password host port database</h5>
+    <div class="form">
+        <form action="/mys" method="POST">
+            <input type="text" name="my_sql" id="my_sql">
+            <input type="submit" value="Search">
+
+        </form>
+    </div>
+    <h4 style="text-align: center">Mongodb Atlas connection url</h4>
+    <div class="form">
+        <form action="/mongo" method="POST">
+            <input type="text" name="vid" id="vid">
+            <input type="submit" value="Search">
+
+        </form>
+    </div>
+    <h3 style="text-align: center">Youtube Video Url to fetch comments</h3>
+    <div class="form">
+        <form action="/video_url" method="POST">
+            <h5 style="text-align: center">video_url</h5>
+            <input type="text" name="vid_link" id="vid_link">
+            <h5 style="text-align: center">Mongodb atlas connection url</h5>
+            <input type="text" name="mong" id ="mong">
+            <input type="submit" value="Search">
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

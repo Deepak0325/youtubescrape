@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <body>
+        <table cellspacing="0" style="width:100%" border="2px">
+      <tr>
+         <th>Commenter's Name</th>
+         <th>Comment</th>
+         <th>Likes</th>
+          <th>Replies</th>
+      </tr>
+         {% for question in questions %}
+      <tr>
+          <td>{{question["commenter_name"]}}</td>
+          <td>{{question["comment_text"]}}</td>
+          <td>{{question["likes_count"]}}</td>
+          <td>{{question["replies_count"]}}</td>
+
+          {% endfor %}
+
+      </table>
+   </body>
+</html>
