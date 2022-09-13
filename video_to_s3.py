@@ -6,7 +6,7 @@ v = pafy.new(video)
 ur = v.getbest()
 watch_rul=ur.url
 print(watch_rul)
-s3 = boto3.resource('s3', aws_access_key_id="AKIAWD35ZZJWY34RZE5M", aws_secret_access_key="z4WPZ6/4mb+3OjZhMi5UhtamXdP4OZ/RNOsCeT2u")
+s3 = boto3.resource('s3', aws_access_key_id="Your Access key id here", aws_secret_access_key="Your Secret Access Key here")
 bucket_name = 'youvidscraper'
 r = requests.get(watch_rul, stream=True)
 print(r)
